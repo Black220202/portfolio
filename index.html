@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharv Patil | Web Developer & Creative UI Designer</title>
+    <title>Atharv Patil | Interactive Frontend Developer & Digital Experience Designer</title>
     <meta name="description"
-        content="Atharv Patil - Interactive Web Developer & Creative UI Designer building high-performance web experiences with animation and system-level interactions.">
+        content="Atharv Patil - Interactive Frontend Developer & Digital Experience Designer crafting high-performance, immersive web experiences that bridge complex code and stunning visual design.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -27,6 +32,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -43,6 +49,7 @@
     <div id="mobile-menu" class="mobile-menu">
         <ul class="mobile-links">
             <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
             <li><a href="#skills" class="mobile-link">Skills</a></li>
             <li><a href="#projects" class="mobile-link">Projects</a></li>
             <li><a href="#contact" class="mobile-link">Contact</a></li>
@@ -57,12 +64,15 @@
                 <span class="greeting-text">Hello, I'm</span>
             </div>
             <h1 class="hero-name">
-                <span class="name-line" data-text="Atharv">Atharv</span>
-                <span class="name-line accent" data-text="Patil.">Patil.</span>
+                <span class="name-line" data-text="Atharv Patil">Atharv Patil</span>
+                <span class="name-line accent" data-text="— Interactive Frontend Developer & Digital Experience Designer">— Interactive Frontend Developer & Digital Experience Designer</span>
             </h1>
             <p class="hero-tagline">
                 <span class="tagline-word" id="rotating-text"></span>
                 <span class="cursor-blink">|</span>
+            </p>
+            <p class="hero-value-prop">
+                Crafting high-performance, immersive web experiences that bridge the gap between complex code and stunning visual design.
             </p>
             <p class="hero-description">
                 I engineer digital experiences at the intersection of design and technology.
@@ -76,7 +86,7 @@
                     </svg>
                 </a>
                 <a href="#contact" class="btn btn-outline" id="cta-contact">
-                    <span>Get In Touch</span>
+                    <span>Let's Work Together</span>
                 </a>
             </div>
             <div class="hero-stats">
@@ -91,6 +101,36 @@
                 <div class="stat">
                     <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+            <div class="hero-value-props reveal">
+                <div class="value-prop">
+                    <span class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </span>
+                    <span>Performance-First Architecture</span>
+                </div>
+                <div class="value-prop">
+                    <span class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </span>
+                    <span>Motion-Driven Interactions</span>
+                </div>
+                <div class="value-prop">
+                    <span class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </span>
+                    <span>Full-Stack Capability</span>
                 </div>
             </div>
         </div>
@@ -215,11 +255,96 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02. Services</span>
+                <h2 class="section-title">What I Deliver</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Specialized frontend solutions that transform complex challenges into seamless digital experiences</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal" data-delay="0">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <path d="M3 9h18" />
+                            <path d="M9 21V9" />
+                        </svg>
+                    </div>
+                    <h3>Immersive Landing Pages</h3>
+                    <p>High-converting, animated web experiences built to make brands stand out. From cinematic scroll narratives to interactive product showcases — every pixel engineered for engagement.</p>
+                    <ul class="service-features">
+                        <li>GSAP/Framer Motion animations</li>
+                        <li>Scroll-triggered storytelling</li>
+                        <li>WebGL/Canvas backgrounds</li>
+                        <li>Lighthouse 95+ scores</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        <span>Start a Project</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="service-card reveal" data-delay="100">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <h3>Figma-to-Code Development</h3>
+                    <p>Pixel-perfect, ultra-smooth implementation of complex design files into lightning-fast, maintainable code. Design systems, component libraries, and responsive layouts that match your vision exactly.</p>
+                    <ul class="service-features">
+                        <li>React/Next.js + TypeScript</li>
+                        <li>Tailwind CSS / Styled Components</li>
+                        <li>Component-driven architecture</li>
+                        <li>Design token synchronization</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        <span>Start a Project</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="service-card reveal" data-delay="200">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Creative Frontend Engineering</h3>
+                    <p>Adding interactive 3D, custom animations, and cinematic transitions to existing platforms. Three.js, WebGL shaders, and advanced CSS techniques to elevate your product's feel.</p>
+                    <ul class="service-features">
+                        <li>Three.js / React Three Fiber</li>
+                        <li>Custom GLSL shaders</li>
+                        <li>Scroll-linked animations</li>
+                        <li>Micro-interaction systems</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        <span>Start a Project</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">02. Skills</span>
+                <span class="section-tag">03. Skills</span>
                 <h2 class="section-title">What I Do</h2>
                 <div class="section-line"></div>
             </div>
@@ -363,9 +488,10 @@
     <section id="projects" class="section projects">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">03. Projects</span>
+                <span class="section-tag">04. Projects</span>
                 <h2 class="section-title">Featured Work</h2>
                 <div class="section-line"></div>
+                <p class="section-subtitle">Selected projects showcasing technical depth and design execution</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card reveal" data-delay="0">
@@ -394,15 +520,25 @@
                         <img src="project-fine-dining.png" alt="L'ÉPOQUE Fine Dining Website" class="project-thumbnail">
                     </div>
                     <div class="project-info">
-                        <span class="project-category">Restaurant</span>
-                        <h3 class="project-title">L'ÉPOQUE — Fine Dining</h3>
-                        <p class="project-description">A sophisticated fine dining restaurant website with an elegant
-                            dark aesthetic, immersive imagery, and seamless reservation flow.</p>
+                        <span class="project-category">Restaurant & Hospitality</span>
+                        <h3 class="project-title">L'ÉPOQUE — Fine Dining Experience</h3>
+                        <p class="project-description">A sophisticated fine dining restaurant website with an elegant dark aesthetic, immersive imagery, and seamless reservation flow.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <h4>Challenge</h4>
+                                <p>Creating a luxury digital presence that mirrors the exclusivity of a Michelin-starred dining experience while maintaining blazing-fast performance across all devices.</p>
+                            </div>
+                            <div class="project-detail">
+                                <h4>Solution</h4>
+                                <p>Built a custom animation system using IntersectionObserver and CSS transforms for buttery-smooth scroll-triggered reveals. Implemented lazy-loaded, WebP-optimized imagery with LQIP placeholders. Designed an accessible, keyboard-navigable reservation flow with real-time availability checking.</p>
+                            </div>
+                        </div>
                         <div class="project-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Responsive</span>
+                            <span>Vanilla JS</span>
+                            <span>IntersectionObserver</span>
+                            <span>WebP Optimization</span>
                         </div>
                     </div>
                 </div>
@@ -433,15 +569,25 @@
                             class="project-thumbnail">
                     </div>
                     <div class="project-info">
-                        <span class="project-category">Architecture</span>
-                        <h3 class="project-title">AURA — Interior Design</h3>
-                        <p class="project-description">A minimalist luxury interior design & architecture studio website
-                            with clean aesthetics and a refined neutral palette.</p>
+                        <span class="project-category">Architecture & Interior Design</span>
+                        <h3 class="project-title">AURA — Interior Design Studio</h3>
+                        <p class="project-description">A minimalist luxury interior design & architecture studio website with clean aesthetics and a refined neutral palette.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <h4>Challenge</h4>
+                                <p>Translating high-end print-design sensibilities to the web — maintaining typographic precision, whitespace harmony, and image quality across breakpoints without sacrificing performance.</p>
+                            </div>
+                            <div class="project-detail">
+                                <h4>Solution</h4>
+                                <p>Developed a fluid typography system using CSS clamp() and custom properties for seamless scaling. Built a Masonry-style project grid with CSS Grid and auto-placement. Implemented a custom image comparison slider for before/after project showcases using pure CSS.</p>
+                            </div>
+                        </div>
                         <div class="project-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>UI Design</span>
+                            <span>Vanilla JS</span>
+                            <span>CSS Grid</span>
+                            <span>Fluid Typography</span>
                         </div>
                     </div>
                 </div>
@@ -471,15 +617,25 @@
                         <img src="project-aura-pro.png" alt="Aura Pro Audio Landing Page" class="project-thumbnail">
                     </div>
                     <div class="project-info">
-                        <span class="project-category">Product</span>
+                        <span class="project-category">Product & Audio</span>
                         <h3 class="project-title">Aura Pro — Sound, Reimagined</h3>
-                        <p class="project-description">A sleek, dark-themed product landing page for premium audio
-                            equipment with futuristic design and bold typography.</p>
+                        <p class="project-description">A sleek, dark-themed product landing page for premium audio equipment with futuristic design and bold typography.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <h4>Challenge</h4>
+                                <p>Building a high-impact product page that communicates premium audio quality through visual and interactive design — including a performant 3D product viewer and scroll-synchronized narrative sections.</p>
+                            </div>
+                            <div class="project-detail">
+                                <h4>Solution</h4>
+                                <p>Integrated a lightweight Three.js product viewer with DRACO-compressed GLTF models (<50KB). Created a scroll-driven animation timeline using GSAP ScrollTrigger for cinematic section transitions. Built a custom audio visualizer using Web Audio API and Canvas for the hero section.</p>
+                            </div>
+                        </div>
                         <div class="project-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Animation</span>
+                            <span>Three.js</span>
+                            <span>GSAP</span>
+                            <span>Web Audio API</span>
                         </div>
                     </div>
                 </div>
@@ -491,9 +647,10 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">04. Contact</span>
+                <span class="section-tag">05. Contact</span>
                 <h2 class="section-title">Let's Connect</h2>
                 <div class="section-line"></div>
+                <p class="section-subtitle">Ready to build something exceptional? Let's discuss your vision.</p>
             </div>
             <div class="contact-content reveal">
                 <p class="contact-text">
@@ -502,10 +659,9 @@
                     Whether you have a question or just want to say hi — my inbox is always open!
                 </p>
                 <a href="mailto:atharvp125@gmail.com" class="btn btn-primary btn-large" id="contact-email">
-                    <span>Say Hello</span>
+                    <span>Start a Conversation</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
                 <div class="social-links">
